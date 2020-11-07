@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace LTTQ_BTL_N12
+namespace LTTQ_BTL_N12.Forms
 {
-    public partial class Form1 : Form
+    public partial class MasterForm : Form
     {
-        public Form1()
+        public MasterForm()
         {
             InitializeComponent();
         }
