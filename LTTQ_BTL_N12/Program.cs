@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LTTQ_BTL_N12.Forms;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,7 @@ namespace LTTQ_BTL_N12
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new SignIn());
         }
     }
 }
