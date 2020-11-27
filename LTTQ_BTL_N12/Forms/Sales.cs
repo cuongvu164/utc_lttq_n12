@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace LTTQ_BTL_N12.Forms
 {
-    public partial class XtraUserControl1 : DevExpress.XtraEditors.XtraUserControl
+    public partial class Sales : DevExpress.XtraEditors.XtraUserControl
     {
-        public XtraUserControl1()
+        public Sales()
         {
             InitializeComponent();
         }

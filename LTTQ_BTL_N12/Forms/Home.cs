@@ -81,7 +81,7 @@ namespace LTTQ_BTL_N12.Forms
         private void button1_Click(object sender, EventArgs e)
         {
             moveSlide(btnSearch);
-            XtraUserControl1 user = new XtraUserControl1();
+            SearchDvD user = new SearchDvD();
             addPanel(user);
             
         }
@@ -103,21 +103,29 @@ namespace LTTQ_BTL_N12.Forms
         private void btnOutput_Click(object sender, EventArgs e)
         {
             moveSlide(btnOutput);
+            Sales sale = new Sales();
+            addPanel(sale);
         }
 
         private void btnStoreHouse_Click(object sender, EventArgs e)
         {
             moveSlide(btnStoreHouse);
+            StoreHouse storehouse = new StoreHouse();
+            addPanel(storehouse);
         }
 
         private void btnCustomer_Click(object sender, EventArgs e)
         {
             moveSlide(btnCustomer);
+            Customer customer = new Customer();
+            addPanel(customer);
         }
 
         private void btnSupplier_Click(object sender, EventArgs e)
         {
             moveSlide(btnSupplier);
+            Provided provided = new Provided();
+            addPanel(provided);
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
@@ -130,6 +138,11 @@ namespace LTTQ_BTL_N12.Forms
             usc.Dock = DockStyle.Fill;
             panelMain.Controls.Add(usc);
             usc.BringToFront();
+        }
+
+        private void Home_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

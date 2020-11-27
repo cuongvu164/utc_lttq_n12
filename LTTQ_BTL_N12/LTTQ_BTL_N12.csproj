@@ -232,6 +232,12 @@
     <Compile Include="Core\Repos\NoiSanXuatRepo.cs" />
     <Compile Include="Core\Repos\ProcessDataBase.cs" />
     <Compile Include="Core\Repos\TheLoaiRepo.cs" />
+    <Compile Include="Forms\Customer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Customer.Designer.cs">
+      <DependentUpon>Customer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -244,11 +250,35 @@
     <Compile Include="Forms\MasterForm.Designer.cs">
       <DependentUpon>MasterForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Provided.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Provided.Designer.cs">
+      <DependentUpon>Provided.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Sales.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Sales.Designer.cs">
+      <DependentUpon>Sales.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\SignIn.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\SignIn.Designer.cs">
       <DependentUpon>SignIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SearchDvD.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\SearchDvD.Designer.cs">
+      <DependentUpon>SearchDvD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\StoreHouse.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\StoreHouse.Designer.cs">
+      <DependentUpon>StoreHouse.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\XtraUserControl1.cs">
       <SubType>UserControl</SubType>
@@ -258,11 +288,26 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\Customer.resx">
+      <DependentUpon>Customer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Provided.resx">
+      <DependentUpon>Provided.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Sales.resx">
+      <DependentUpon>Sales.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\SignIn.resx">
       <DependentUpon>SignIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SearchDvD.resx">
+      <DependentUpon>SearchDvD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StoreHouse.resx">
+      <DependentUpon>StoreHouse.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\XtraUserControl1.resx">
       <DependentUpon>XtraUserControl1.cs</DependentUpon>

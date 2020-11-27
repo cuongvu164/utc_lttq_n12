@@ -11,14 +11,19 @@ using System.Windows.Forms;
 
 namespace LTTQ_BTL_N12.Forms
 {
-    public partial class XtraUserControl1 : DevExpress.XtraEditors.XtraUserControl
+    public partial class StoreHouse : DevExpress.XtraEditors.XtraUserControl
     {
-        public XtraUserControl1()
+        public StoreHouse()
         {
             InitializeComponent();
         }
 
-        private void labelControl1_Click(object sender, EventArgs e)
+        private void StoreHouse_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textEdit2_EditValueChanged(object sender, EventArgs e)
         {
 
         }
