@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace LTTQ_BTL_N12.Core.Repos
 {
-    class NoiSanXuatRepo : BaseRepo<NoiSanXuat>
+    public class NoiSanXuatRepo : BaseRepo<NoiSanXuat>
     {
     }
 }

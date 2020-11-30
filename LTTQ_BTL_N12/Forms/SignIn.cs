@@ -64,11 +64,14 @@ namespace LTTQ_BTL_N12.Forms
             {
                 if (checkLogin())
                 {
-                    using (Home home = new Home())
-                    {
-                        home.ShowDialog();
-                        this.Close();
-                    }
+                    var home = new Home();
+                    home.Visible = true;
+                    //using (Home home = new Home())
+                    //{
+                    //    home.ShowDialog();
+                    //    this.Visible = false;
+                    //}
+                    this.Visible = false;
                 }
             }
         }

@@ -1,7 +1,8 @@
 ﻿using LTTQ_BTL_N12.Core.Models;
-using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
+using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -63,10 +64,9 @@ namespace LTTQ_BTL_N12.Core.Repos
             return context.Set<E>().ToList();
         }
 
-        public bool Update(object id, E entity)
+        public bool Update(E entity)
         {
-            var ent = Find(id);
-            ent = entity;
+            context.Set<E>().AddOrUpdate(entity);
             return Commit();
         }
 

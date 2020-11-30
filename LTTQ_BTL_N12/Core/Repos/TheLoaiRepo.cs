@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace LTTQ_BTL_N12.Core.Repos
 {
-    class TheLoaiRepo : BaseRepo<TheLoai>
+    public class TheLoaiRepo : BaseRepo<TheLoai>
     {
     }
 }

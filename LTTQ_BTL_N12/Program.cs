@@ -17,7 +17,8 @@ namespace LTTQ_BTL_N12
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new SignIn());
+            //Application.Run(new SignIn());
+            Application.Run(new Home());
         }
     }
 }

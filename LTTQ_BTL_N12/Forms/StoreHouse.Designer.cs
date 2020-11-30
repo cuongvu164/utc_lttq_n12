@@ -77,6 +77,7 @@ namespace LTTQ_BTL_N12.Forms
             this.txtMDia.Name = "txtMDia";
             this.txtMDia.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMDia.Properties.Appearance.Options.UseFont = true;
+            this.txtMDia.Properties.ReadOnly = true;
             this.txtMDia.Size = new System.Drawing.Size(117, 28);
             this.txtMDia.TabIndex = 1;
             // 
@@ -224,8 +225,10 @@ namespace LTTQ_BTL_N12.Forms
             this.dtGVShowStoreHouse.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dtGVShowStoreHouse.RowHeadersWidth = 51;
             this.dtGVShowStoreHouse.RowTemplate.Height = 24;
-            this.dtGVShowStoreHouse.Size = new System.Drawing.Size(874, 305);
+            this.dtGVShowStoreHouse.Size = new System.Drawing.Size(881, 351);
             this.dtGVShowStoreHouse.TabIndex = 16;
+            this.dtGVShowStoreHouse.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtGVShowStoreHouse_CellContentClick);
+            this.dtGVShowStoreHouse.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtGVShowStoreHouse_CellContentClick);
             // 
             // btnEdit
             // 
@@ -244,6 +247,7 @@ namespace LTTQ_BTL_N12.Forms
             this.btnEdit.Text = "   Sửa";
             this.btnEdit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnRemove
             // 
@@ -275,11 +279,12 @@ namespace LTTQ_BTL_N12.Forms
             this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.btnAdd.Location = new System.Drawing.Point(109, 191);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(137, 47);
+            this.btnAdd.Size = new System.Drawing.Size(159, 47);
             this.btnAdd.TabIndex = 21;
-            this.btnAdd.Text = "   Thêm";
+            this.btnAdd.Text = "Xuất Excel";
             this.btnAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // groupControl1
             // 
@@ -302,9 +307,10 @@ namespace LTTQ_BTL_N12.Forms
             this.groupControl1.Controls.Add(this.labelControl1);
             this.groupControl1.Location = new System.Drawing.Point(0, 8);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(874, 261);
+            this.groupControl1.Size = new System.Drawing.Size(881, 261);
             this.groupControl1.TabIndex = 24;
             this.groupControl1.Text = "Thông Tin Đĩa";
+            this.groupControl1.Paint += new System.Windows.Forms.PaintEventHandler(this.groupControl1_Paint);
             // 
             // StoreHouse
             // 
@@ -313,7 +319,7 @@ namespace LTTQ_BTL_N12.Forms
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.dtGVShowStoreHouse);
             this.Name = "StoreHouse";
-            this.Size = new System.Drawing.Size(875, 589);
+            this.Size = new System.Drawing.Size(881, 637);
             this.Load += new System.EventHandler(this.StoreHouse_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtMDia.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTenDia.Properties)).EndInit();
