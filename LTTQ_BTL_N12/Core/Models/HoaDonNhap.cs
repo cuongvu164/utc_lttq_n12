@@ -11,15 +11,24 @@ namespace LTTQ_BTL_N12.Core.Models
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-
+    
     public partial class HoaDonNhap
     {
-        [Key]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public HoaDonNhap()
+        {
+            this.ChiTietHoaDonNhaps = new HashSet<ChiTietHoaDonNhap>();
+        }
+    
         public string SoHDN { get; set; }
         public string MaNV { get; set; }
         public System.DateTime NgayNhap { get; set; }
         public string MaNCC { get; set; }
         public double TongTien { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ChiTietHoaDonNhap> ChiTietHoaDonNhaps { get; set; }
+        public virtual NhaCungCap NhaCungCap { get; set; }
+        public virtual NhanVien NhanVien { get; set; }
     }
 }

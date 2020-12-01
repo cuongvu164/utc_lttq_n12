@@ -11,14 +11,21 @@ namespace LTTQ_BTL_N12.Core.Models
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-
+    
     public partial class NhaCungCap
     {
-        [Key]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public NhaCungCap()
+        {
+            this.HoaDonNhaps = new HashSet<HoaDonNhap>();
+        }
+    
         public string MaNCC { get; set; }
         public string TenNcc { get; set; }
         public string DiaChi { get; set; }
         public Nullable<int> DienThoai { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<HoaDonNhap> HoaDonNhaps { get; set; }
     }
 }

@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\censodev\Desktop\LTTQ_BTL_N12\LTTQ_BTL_N12\Core\Models\DataModel.edmx'. 
+﻿// T4 code generation is enabled for model 'E:\utc_lttq_n12\LTTQ_BTL_N12\Core\Models\Model1.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

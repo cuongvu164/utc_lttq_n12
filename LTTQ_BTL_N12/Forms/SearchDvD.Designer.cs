@@ -31,14 +31,12 @@ namespace LTTQ_BTL_N12.Forms
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SearchDvD));
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.rbtnCategory = new System.Windows.Forms.RadioButton();
-            this.rbtnProducer = new System.Windows.Forms.RadioButton();
-            this.txtCategory = new DevExpress.XtraEditors.TextEdit();
-            this.txtProducer = new DevExpress.XtraEditors.TextEdit();
             this.btnSearch = new Bunifu.Framework.UI.BunifuThinButton2();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCategory.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtProducer.Properties)).BeginInit();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,52 +49,6 @@ namespace LTTQ_BTL_N12.Forms
             this.labelControl1.Size = new System.Drawing.Size(102, 21);
             this.labelControl1.TabIndex = 1;
             this.labelControl1.Text = "Tìm kiếm đĩa:";
-            // 
-            // rbtnCategory
-            // 
-            this.rbtnCategory.AutoSize = true;
-            this.rbtnCategory.Font = new System.Drawing.Font("Lucida Fax", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnCategory.Location = new System.Drawing.Point(178, 94);
-            this.rbtnCategory.Name = "rbtnCategory";
-            this.rbtnCategory.Size = new System.Drawing.Size(103, 24);
-            this.rbtnCategory.TabIndex = 2;
-            this.rbtnCategory.TabStop = true;
-            this.rbtnCategory.Text = "Thể loại";
-            this.rbtnCategory.UseVisualStyleBackColor = true;
-            this.rbtnCategory.CheckedChanged += new System.EventHandler(this.rbtnCategory_CheckedChanged);
-            // 
-            // rbtnProducer
-            // 
-            this.rbtnProducer.AutoSize = true;
-            this.rbtnProducer.Font = new System.Drawing.Font("Lucida Fax", 10.2F, System.Drawing.FontStyle.Bold);
-            this.rbtnProducer.Location = new System.Drawing.Point(178, 140);
-            this.rbtnProducer.Name = "rbtnProducer";
-            this.rbtnProducer.Size = new System.Drawing.Size(150, 24);
-            this.rbtnProducer.TabIndex = 3;
-            this.rbtnProducer.TabStop = true;
-            this.rbtnProducer.Text = "Nhà Sản Xuất";
-            this.rbtnProducer.UseVisualStyleBackColor = true;
-            this.rbtnProducer.CheckedChanged += new System.EventHandler(this.rbtnProducer_CheckedChanged);
-            // 
-            // txtCategory
-            // 
-            this.txtCategory.Location = new System.Drawing.Point(360, 92);
-            this.txtCategory.Name = "txtCategory";
-            this.txtCategory.Properties.Appearance.Font = new System.Drawing.Font("Lucida Fax", 10.2F, System.Drawing.FontStyle.Bold);
-            this.txtCategory.Properties.Appearance.Options.UseFont = true;
-            this.txtCategory.Properties.ReadOnly = true;
-            this.txtCategory.Size = new System.Drawing.Size(208, 26);
-            this.txtCategory.TabIndex = 4;
-            // 
-            // txtProducer
-            // 
-            this.txtProducer.Location = new System.Drawing.Point(360, 137);
-            this.txtProducer.Name = "txtProducer";
-            this.txtProducer.Properties.Appearance.Font = new System.Drawing.Font("Lucida Fax", 10.2F, System.Drawing.FontStyle.Bold);
-            this.txtProducer.Properties.Appearance.Options.UseFont = true;
-            this.txtProducer.Properties.ReadOnly = true;
-            this.txtProducer.Size = new System.Drawing.Size(208, 26);
-            this.txtProducer.TabIndex = 5;
             // 
             // btnSearch
             // 
@@ -122,6 +74,7 @@ namespace LTTQ_BTL_N12.Forms
             this.btnSearch.Size = new System.Drawing.Size(170, 68);
             this.btnSearch.TabIndex = 6;
             this.btnSearch.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // dataGridView1
             // 
@@ -132,23 +85,58 @@ namespace LTTQ_BTL_N12.Forms
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(850, 368);
             this.dataGridView1.TabIndex = 7;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(344, 92);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(246, 24);
+            this.comboBox1.TabIndex = 8;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(344, 139);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(246, 24);
+            this.comboBox2.TabIndex = 8;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(183, 92);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(76, 21);
+            this.checkBox1.TabIndex = 9;
+            this.checkBox1.Text = "Thể loại";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(183, 140);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(113, 21);
+            this.checkBox2.TabIndex = 9;
+            this.checkBox2.Text = "Nhà Sản Xuất";
+            this.checkBox2.UseVisualStyleBackColor = true;
             // 
             // SearchDvD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Controls.Add(this.checkBox2);
+            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnSearch);
-            this.Controls.Add(this.txtProducer);
-            this.Controls.Add(this.txtCategory);
-            this.Controls.Add(this.rbtnProducer);
-            this.Controls.Add(this.rbtnCategory);
             this.Controls.Add(this.labelControl1);
             this.Name = "SearchDvD";
             this.Size = new System.Drawing.Size(873, 587);
-            ((System.ComponentModel.ISupportInitialize)(this.txtCategory.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtProducer.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -157,11 +145,11 @@ namespace LTTQ_BTL_N12.Forms
 
         #endregion
         private DevExpress.XtraEditors.LabelControl labelControl1;
-        private System.Windows.Forms.RadioButton rbtnCategory;
-        private System.Windows.Forms.RadioButton rbtnProducer;
-        private DevExpress.XtraEditors.TextEdit txtCategory;
-        private DevExpress.XtraEditors.TextEdit txtProducer;
         private Bunifu.Framework.UI.BunifuThinButton2 btnSearch;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox checkBox2;
     }
 }

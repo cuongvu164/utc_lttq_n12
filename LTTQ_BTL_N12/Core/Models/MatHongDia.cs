@@ -11,14 +11,14 @@ namespace LTTQ_BTL_N12.Core.Models
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-
+    
     public partial class MatHongDia
     {
-        [Key]
         public int MaMatHong { get; set; }
         public string MaDia { get; set; }
         public int SoLuong { get; set; }
         public System.DateTime NgayMatHong { get; set; }
+    
+        public virtual KhoDia KhoDia { get; set; }
     }
 }

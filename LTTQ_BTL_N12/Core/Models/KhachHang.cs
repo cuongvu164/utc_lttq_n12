@@ -11,14 +11,21 @@ namespace LTTQ_BTL_N12.Core.Models
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-
+    
     public partial class KhachHang
     {
-        [Key]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public KhachHang()
+        {
+            this.HoaDonBans = new HashSet<HoaDonBan>();
+        }
+    
         public string MaKhach { get; set; }
         public string TenKhach { get; set; }
         public string DiaChi { get; set; }
         public Nullable<int> DienThoai { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<HoaDonBan> HoaDonBans { get; set; }
     }
 }

@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
             this.panelLeft = new System.Windows.Forms.Panel();
+            this.btnSearchBill = new System.Windows.Forms.Button();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnSupplier = new System.Windows.Forms.Button();
@@ -46,6 +47,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.panelMain = new System.Windows.Forms.Panel();
+            this.btnReport = new System.Windows.Forms.Button();
             this.panelLeft.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -54,6 +56,8 @@
             // panelLeft
             // 
             this.panelLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(161)))), ((int)(((byte)(250)))));
+            this.panelLeft.Controls.Add(this.btnReport);
+            this.panelLeft.Controls.Add(this.btnSearchBill);
             this.panelLeft.Controls.Add(this.labelControl1);
             this.panelLeft.Controls.Add(this.pictureBox1);
             this.panelLeft.Controls.Add(this.btnSupplier);
@@ -70,6 +74,25 @@
             this.panelLeft.Size = new System.Drawing.Size(244, 767);
             this.panelLeft.TabIndex = 0;
             this.panelLeft.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // btnSearchBill
+            // 
+            this.btnSearchBill.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(161)))), ((int)(((byte)(250)))));
+            this.btnSearchBill.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSearchBill.FlatAppearance.BorderSize = 0;
+            this.btnSearchBill.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearchBill.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearchBill.ForeColor = System.Drawing.Color.White;
+            this.btnSearchBill.Image = ((System.Drawing.Image)(resources.GetObject("btnSearchBill.Image")));
+            this.btnSearchBill.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSearchBill.Location = new System.Drawing.Point(12, 214);
+            this.btnSearchBill.Name = "btnSearchBill";
+            this.btnSearchBill.Size = new System.Drawing.Size(229, 54);
+            this.btnSearchBill.TabIndex = 19;
+            this.btnSearchBill.Text = "   Tra Cứu Hóa Đơn";
+            this.btnSearchBill.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSearchBill.UseVisualStyleBackColor = false;
+            this.btnSearchBill.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // labelControl1
             // 
@@ -92,6 +115,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 17;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // btnSupplier
             // 
@@ -103,7 +127,7 @@
             this.btnSupplier.ForeColor = System.Drawing.Color.White;
             this.btnSupplier.Image = ((System.Drawing.Image)(resources.GetObject("btnSupplier.Image")));
             this.btnSupplier.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSupplier.Location = new System.Drawing.Point(12, 507);
+            this.btnSupplier.Location = new System.Drawing.Point(12, 557);
             this.btnSupplier.Name = "btnSupplier";
             this.btnSupplier.Size = new System.Drawing.Size(229, 54);
             this.btnSupplier.TabIndex = 15;
@@ -122,7 +146,7 @@
             this.btnCustomer.ForeColor = System.Drawing.Color.White;
             this.btnCustomer.Image = ((System.Drawing.Image)(resources.GetObject("btnCustomer.Image")));
             this.btnCustomer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCustomer.Location = new System.Drawing.Point(12, 437);
+            this.btnCustomer.Location = new System.Drawing.Point(12, 487);
             this.btnCustomer.Name = "btnCustomer";
             this.btnCustomer.Size = new System.Drawing.Size(229, 54);
             this.btnCustomer.TabIndex = 13;
@@ -141,7 +165,7 @@
             this.btnStoreHouse.ForeColor = System.Drawing.Color.White;
             this.btnStoreHouse.Image = ((System.Drawing.Image)(resources.GetObject("btnStoreHouse.Image")));
             this.btnStoreHouse.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnStoreHouse.Location = new System.Drawing.Point(12, 366);
+            this.btnStoreHouse.Location = new System.Drawing.Point(12, 416);
             this.btnStoreHouse.Name = "btnStoreHouse";
             this.btnStoreHouse.Size = new System.Drawing.Size(229, 54);
             this.btnStoreHouse.TabIndex = 11;
@@ -160,7 +184,7 @@
             this.btnOutput.ForeColor = System.Drawing.Color.White;
             this.btnOutput.Image = ((System.Drawing.Image)(resources.GetObject("btnOutput.Image")));
             this.btnOutput.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnOutput.Location = new System.Drawing.Point(12, 296);
+            this.btnOutput.Location = new System.Drawing.Point(12, 346);
             this.btnOutput.Name = "btnOutput";
             this.btnOutput.Size = new System.Drawing.Size(229, 54);
             this.btnOutput.TabIndex = 9;
@@ -179,7 +203,7 @@
             this.btnInput.ForeColor = System.Drawing.Color.White;
             this.btnInput.Image = ((System.Drawing.Image)(resources.GetObject("btnInput.Image")));
             this.btnInput.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInput.Location = new System.Drawing.Point(12, 224);
+            this.btnInput.Location = new System.Drawing.Point(12, 274);
             this.btnInput.Name = "btnInput";
             this.btnInput.Size = new System.Drawing.Size(229, 54);
             this.btnInput.TabIndex = 7;
@@ -202,7 +226,7 @@
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(229, 54);
             this.btnSearch.TabIndex = 5;
-            this.btnSearch.Text = "   Tra Cứu";
+            this.btnSearch.Text = "   Tra Cứu Đĩa";
             this.btnSearch.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSearch.UseVisualStyleBackColor = false;
             this.btnSearch.Click += new System.EventHandler(this.button1_Click);
@@ -244,11 +268,11 @@
             this.btnLogOut.ForeColor = System.Drawing.Color.White;
             this.btnLogOut.Image = ((System.Drawing.Image)(resources.GetObject("btnLogOut.Image")));
             this.btnLogOut.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogOut.Location = new System.Drawing.Point(12, 662);
+            this.btnLogOut.Location = new System.Drawing.Point(12, 713);
             this.btnLogOut.Name = "btnLogOut";
             this.btnLogOut.Size = new System.Drawing.Size(229, 54);
             this.btnLogOut.TabIndex = 2;
-            this.btnLogOut.Text = "   Đăng Xuất";
+            this.btnLogOut.Text = "   Thoát";
             this.btnLogOut.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLogOut.UseVisualStyleBackColor = false;
             this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
@@ -282,11 +306,30 @@
             // 
             // panelMain
             // 
-            this.panelMain.Location = new System.Drawing.Point(247, 130);
+            this.panelMain.Location = new System.Drawing.Point(247, 78);
             this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(881, 637);
+            this.panelMain.Size = new System.Drawing.Size(881, 689);
             this.panelMain.TabIndex = 3;
             this.panelMain.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // btnReport
+            // 
+            this.btnReport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(161)))), ((int)(((byte)(250)))));
+            this.btnReport.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnReport.FlatAppearance.BorderSize = 0;
+            this.btnReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReport.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReport.ForeColor = System.Drawing.Color.White;
+            this.btnReport.Image = ((System.Drawing.Image)(resources.GetObject("btnReport.Image")));
+            this.btnReport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReport.Location = new System.Drawing.Point(12, 628);
+            this.btnReport.Name = "btnReport";
+            this.btnReport.Size = new System.Drawing.Size(229, 54);
+            this.btnReport.TabIndex = 20;
+            this.btnReport.Text = "   Báo cáo";
+            this.btnReport.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnReport.UseVisualStyleBackColor = false;
+            this.btnReport.Click += new System.EventHandler(this.button1_Click_2);
             // 
             // Home
             // 
@@ -329,5 +372,7 @@
         private System.Windows.Forms.Panel panel1;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private System.Windows.Forms.Panel panelMain;
+        private System.Windows.Forms.Button btnSearchBill;
+        private System.Windows.Forms.Button btnReport;
     }
 }

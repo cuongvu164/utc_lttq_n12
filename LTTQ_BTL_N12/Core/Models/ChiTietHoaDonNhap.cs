@@ -11,11 +11,9 @@ namespace LTTQ_BTL_N12.Core.Models
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-
+    
     public partial class ChiTietHoaDonNhap
     {
-        [Key]
         public string MaChiTietHoaDonNhap { get; set; }
         public string SoHDN { get; set; }
         public string MaDia { get; set; }
@@ -23,5 +21,8 @@ namespace LTTQ_BTL_N12.Core.Models
         public int DonGia { get; set; }
         public Nullable<double> GiamGia { get; set; }
         public double ThanhTien { get; set; }
+    
+        public virtual KhoDia KhoDia { get; set; }
+        public virtual HoaDonNhap HoaDonNhap { get; set; }
     }
 }

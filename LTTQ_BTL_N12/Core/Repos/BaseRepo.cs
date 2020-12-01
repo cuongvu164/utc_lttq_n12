@@ -11,7 +11,7 @@ namespace LTTQ_BTL_N12.Core.Repos
 {
     public abstract class BaseRepo<E> where E : class
     {
-        QuanLyThueBangDiaEntities context;
+        public QuanLyThueBangDiaEntities context;
 
         protected BaseRepo()
         {

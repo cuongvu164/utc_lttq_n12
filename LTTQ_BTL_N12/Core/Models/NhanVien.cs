@@ -11,11 +11,16 @@ namespace LTTQ_BTL_N12.Core.Models
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-
+    
     public partial class NhanVien
     {
-        [Key]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public NhanVien()
+        {
+            this.HoaDonBans = new HashSet<HoaDonBan>();
+            this.HoaDonNhaps = new HashSet<HoaDonNhap>();
+        }
+    
         public string MaNV { get; set; }
         public string TenNV { get; set; }
         public bool GioiTinh { get; set; }
@@ -23,5 +28,11 @@ namespace LTTQ_BTL_N12.Core.Models
         public Nullable<int> DienThoai { get; set; }
         public string DiaChi { get; set; }
         public string MaCV { get; set; }
+    
+        public virtual CongViec CongViec { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<HoaDonBan> HoaDonBans { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<HoaDonNhap> HoaDonNhaps { get; set; }
     }
 }

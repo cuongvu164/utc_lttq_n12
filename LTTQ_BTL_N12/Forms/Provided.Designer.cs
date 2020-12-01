@@ -30,30 +30,20 @@ namespace LTTQ_BTL_N12.Forms
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Provided));
-            this.dtgvProvided = new System.Windows.Forms.DataGridView();
             this.btnEdit = new System.Windows.Forms.Button();
-            this.btnRemove = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtSDT = new System.Windows.Forms.TextBox();
+            this.txtTenNcc = new System.Windows.Forms.TextBox();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtDiaChi = new System.Windows.Forms.TextBox();
+            this.txtNcc = new System.Windows.Forms.TextBox();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvProvided)).BeginInit();
+            this.dtGVShowProvided = new System.Windows.Forms.DataGridView();
+            this.btnNew = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dtGVShowProvided)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dtgvProvided
-            // 
-            this.dtgvProvided.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgvProvided.Location = new System.Drawing.Point(9, 219);
-            this.dtgvProvided.Name = "dtgvProvided";
-            this.dtgvProvided.RowHeadersWidth = 51;
-            this.dtgvProvided.RowTemplate.Height = 24;
-            this.dtgvProvided.Size = new System.Drawing.Size(856, 351);
-            this.dtgvProvided.TabIndex = 21;
             // 
             // btnEdit
             // 
@@ -65,31 +55,14 @@ namespace LTTQ_BTL_N12.Forms
             this.btnEdit.ForeColor = System.Drawing.Color.White;
             this.btnEdit.Image = ((System.Drawing.Image)(resources.GetObject("btnEdit.Image")));
             this.btnEdit.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnEdit.Location = new System.Drawing.Point(363, 143);
+            this.btnEdit.Location = new System.Drawing.Point(388, 178);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(137, 47);
             this.btnEdit.TabIndex = 20;
             this.btnEdit.Text = "   Sửa";
             this.btnEdit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEdit.UseVisualStyleBackColor = false;
-            // 
-            // btnRemove
-            // 
-            this.btnRemove.BackColor = System.Drawing.Color.SeaGreen;
-            this.btnRemove.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRemove.FlatAppearance.BorderSize = 0;
-            this.btnRemove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRemove.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRemove.ForeColor = System.Drawing.Color.White;
-            this.btnRemove.Image = ((System.Drawing.Image)(resources.GetObject("btnRemove.Image")));
-            this.btnRemove.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnRemove.Location = new System.Drawing.Point(618, 143);
-            this.btnRemove.Name = "btnRemove";
-            this.btnRemove.Size = new System.Drawing.Size(137, 47);
-            this.btnRemove.TabIndex = 19;
-            this.btnRemove.Text = "   Xóa";
-            this.btnRemove.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnRemove.UseVisualStyleBackColor = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnAdd
             // 
@@ -101,29 +74,32 @@ namespace LTTQ_BTL_N12.Forms
             this.btnAdd.ForeColor = System.Drawing.Color.White;
             this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
             this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnAdd.Location = new System.Drawing.Point(96, 143);
+            this.btnAdd.Location = new System.Drawing.Point(150, 178);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(137, 47);
             this.btnAdd.TabIndex = 18;
             this.btnAdd.Text = "   Thêm";
             this.btnAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // textBox4
+            // txtSDT
             // 
-            this.textBox4.Font = new System.Drawing.Font("Lucida Fax", 10.2F, System.Drawing.FontStyle.Bold);
-            this.textBox4.Location = new System.Drawing.Point(601, 76);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(211, 28);
-            this.textBox4.TabIndex = 16;
+            this.txtSDT.Font = new System.Drawing.Font("Lucida Fax", 10.2F, System.Drawing.FontStyle.Bold);
+            this.txtSDT.Location = new System.Drawing.Point(601, 76);
+            this.txtSDT.Name = "txtSDT";
+            this.txtSDT.ReadOnly = true;
+            this.txtSDT.Size = new System.Drawing.Size(211, 28);
+            this.txtSDT.TabIndex = 16;
             // 
-            // textBox2
+            // txtTenNcc
             // 
-            this.textBox2.Font = new System.Drawing.Font("Lucida Fax", 10.2F, System.Drawing.FontStyle.Bold);
-            this.textBox2.Location = new System.Drawing.Point(150, 76);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(211, 28);
-            this.textBox2.TabIndex = 17;
+            this.txtTenNcc.Font = new System.Drawing.Font("Lucida Fax", 10.2F, System.Drawing.FontStyle.Bold);
+            this.txtTenNcc.Location = new System.Drawing.Point(150, 76);
+            this.txtTenNcc.Name = "txtTenNcc";
+            this.txtTenNcc.ReadOnly = true;
+            this.txtTenNcc.Size = new System.Drawing.Size(211, 28);
+            this.txtTenNcc.TabIndex = 17;
             // 
             // labelControl4
             // 
@@ -145,21 +121,23 @@ namespace LTTQ_BTL_N12.Forms
             this.labelControl2.TabIndex = 15;
             this.labelControl2.Text = "Tên NCC:";
             // 
-            // textBox3
+            // txtDiaChi
             // 
-            this.textBox3.Font = new System.Drawing.Font("Lucida Fax", 10.2F, System.Drawing.FontStyle.Bold);
-            this.textBox3.Location = new System.Drawing.Point(601, 18);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(211, 28);
-            this.textBox3.TabIndex = 12;
+            this.txtDiaChi.Font = new System.Drawing.Font("Lucida Fax", 10.2F, System.Drawing.FontStyle.Bold);
+            this.txtDiaChi.Location = new System.Drawing.Point(601, 18);
+            this.txtDiaChi.Name = "txtDiaChi";
+            this.txtDiaChi.ReadOnly = true;
+            this.txtDiaChi.Size = new System.Drawing.Size(211, 28);
+            this.txtDiaChi.TabIndex = 12;
             // 
-            // textBox1
+            // txtNcc
             // 
-            this.textBox1.Font = new System.Drawing.Font("Lucida Fax", 10.2F, System.Drawing.FontStyle.Bold);
-            this.textBox1.Location = new System.Drawing.Point(150, 18);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(211, 28);
-            this.textBox1.TabIndex = 13;
+            this.txtNcc.Font = new System.Drawing.Font("Lucida Fax", 10.2F, System.Drawing.FontStyle.Bold);
+            this.txtNcc.Location = new System.Drawing.Point(150, 18);
+            this.txtNcc.Name = "txtNcc";
+            this.txtNcc.ReadOnly = true;
+            this.txtNcc.Size = new System.Drawing.Size(211, 28);
+            this.txtNcc.TabIndex = 13;
             // 
             // labelControl3
             // 
@@ -181,44 +159,76 @@ namespace LTTQ_BTL_N12.Forms
             this.labelControl1.TabIndex = 11;
             this.labelControl1.Text = "Mã NCC:";
             // 
+            // dtGVShowProvided
+            // 
+            this.dtGVShowProvided.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtGVShowProvided.Location = new System.Drawing.Point(0, 289);
+            this.dtGVShowProvided.Name = "dtGVShowProvided";
+            this.dtGVShowProvided.RowHeadersWidth = 51;
+            this.dtGVShowProvided.RowTemplate.Height = 24;
+            this.dtGVShowProvided.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dtGVShowProvided.Size = new System.Drawing.Size(881, 348);
+            this.dtGVShowProvided.TabIndex = 21;
+            this.dtGVShowProvided.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtGVShowProvided_CellClick);
+            this.dtGVShowProvided.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtGVShowProvided_CellContentClick_1);
+            this.dtGVShowProvided.Click += new System.EventHandler(this.dtGVShowProvided_Click);
+            // 
+            // btnNew
+            // 
+            this.btnNew.BackColor = System.Drawing.Color.SeaGreen;
+            this.btnNew.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNew.FlatAppearance.BorderSize = 0;
+            this.btnNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNew.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNew.ForeColor = System.Drawing.Color.White;
+            this.btnNew.Image = ((System.Drawing.Image)(resources.GetObject("btnNew.Image")));
+            this.btnNew.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnNew.Location = new System.Drawing.Point(653, 178);
+            this.btnNew.Name = "btnNew";
+            this.btnNew.Size = new System.Drawing.Size(137, 47);
+            this.btnNew.TabIndex = 22;
+            this.btnNew.Text = "   Mới";
+            this.btnNew.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnNew.UseVisualStyleBackColor = false;
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
+            // 
             // Provided
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.dtgvProvided);
+            this.Controls.Add(this.btnNew);
+            this.Controls.Add(this.dtGVShowProvided);
             this.Controls.Add(this.btnEdit);
-            this.Controls.Add(this.btnRemove);
             this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtSDT);
+            this.Controls.Add(this.txtTenNcc);
             this.Controls.Add(this.labelControl4);
             this.Controls.Add(this.labelControl2);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtDiaChi);
+            this.Controls.Add(this.txtNcc);
             this.Controls.Add(this.labelControl3);
             this.Controls.Add(this.labelControl1);
             this.Name = "Provided";
-            this.Size = new System.Drawing.Size(875, 589);
+            this.Size = new System.Drawing.Size(881, 637);
             this.Load += new System.EventHandler(this.Provided_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvProvided)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtGVShowProvided)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dtgvProvided;
         private System.Windows.Forms.Button btnEdit;
-        private System.Windows.Forms.Button btnRemove;
         private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtSDT;
+        private System.Windows.Forms.TextBox txtTenNcc;
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private DevExpress.XtraEditors.LabelControl labelControl2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtDiaChi;
+        private System.Windows.Forms.TextBox txtNcc;
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.LabelControl labelControl1;
+        private System.Windows.Forms.DataGridView dtGVShowProvided;
+        private System.Windows.Forms.Button btnNew;
     }
 }

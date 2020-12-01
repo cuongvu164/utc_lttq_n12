@@ -29,8 +29,6 @@ namespace LTTQ_BTL_N12.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StoreHouse));
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.txtMDia = new DevExpress.XtraEditors.TextEdit();
@@ -46,19 +44,19 @@ namespace LTTQ_BTL_N12.Forms
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.cbbNSX = new System.Windows.Forms.ComboBox();
             this.cbbTL = new System.Windows.Forms.ComboBox();
-            this.dtGVShowStoreHouse = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnRemove = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.dtGVShowStoreHouse = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.txtMDia.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTenDia.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numUD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDGBan.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDGNhap.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtGVShowStoreHouse)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtGVShowStoreHouse)).BeginInit();
             this.SuspendLayout();
             // 
             // labelControl1
@@ -200,36 +198,6 @@ namespace LTTQ_BTL_N12.Forms
             this.cbbTL.Size = new System.Drawing.Size(119, 29);
             this.cbbTL.TabIndex = 15;
             // 
-            // dtGVShowStoreHouse
-            // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dtGVShowStoreHouse.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dtGVShowStoreHouse.BackgroundColor = System.Drawing.Color.Gainsboro;
-            this.dtGVShowStoreHouse.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dtGVShowStoreHouse.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 7.8F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtGVShowStoreHouse.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dtGVShowStoreHouse.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtGVShowStoreHouse.DoubleBuffered = true;
-            this.dtGVShowStoreHouse.EnableHeadersVisualStyles = false;
-            this.dtGVShowStoreHouse.HeaderBgColor = System.Drawing.Color.SeaGreen;
-            this.dtGVShowStoreHouse.HeaderForeColor = System.Drawing.Color.SeaGreen;
-            this.dtGVShowStoreHouse.Location = new System.Drawing.Point(0, 283);
-            this.dtGVShowStoreHouse.Name = "dtGVShowStoreHouse";
-            this.dtGVShowStoreHouse.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dtGVShowStoreHouse.RowHeadersWidth = 51;
-            this.dtGVShowStoreHouse.RowTemplate.Height = 24;
-            this.dtGVShowStoreHouse.Size = new System.Drawing.Size(881, 351);
-            this.dtGVShowStoreHouse.TabIndex = 16;
-            this.dtGVShowStoreHouse.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtGVShowStoreHouse_CellContentClick);
-            this.dtGVShowStoreHouse.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtGVShowStoreHouse_CellContentClick);
-            // 
             // btnEdit
             // 
             this.btnEdit.BackColor = System.Drawing.Color.SeaGreen;
@@ -266,6 +234,7 @@ namespace LTTQ_BTL_N12.Forms
             this.btnRemove.Text = "   Xóa";
             this.btnRemove.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnRemove.UseVisualStyleBackColor = false;
+            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
             // 
             // btnAdd
             // 
@@ -312,12 +281,23 @@ namespace LTTQ_BTL_N12.Forms
             this.groupControl1.Text = "Thông Tin Đĩa";
             this.groupControl1.Paint += new System.Windows.Forms.PaintEventHandler(this.groupControl1_Paint);
             // 
+            // dtGVShowStoreHouse
+            // 
+            this.dtGVShowStoreHouse.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtGVShowStoreHouse.Location = new System.Drawing.Point(0, 313);
+            this.dtGVShowStoreHouse.Name = "dtGVShowStoreHouse";
+            this.dtGVShowStoreHouse.RowHeadersWidth = 51;
+            this.dtGVShowStoreHouse.RowTemplate.Height = 24;
+            this.dtGVShowStoreHouse.Size = new System.Drawing.Size(881, 324);
+            this.dtGVShowStoreHouse.TabIndex = 25;
+            this.dtGVShowStoreHouse.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtGVShowStoreHouse_CellClick);
+            // 
             // StoreHouse
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.dtGVShowStoreHouse);
+            this.Controls.Add(this.groupControl1);
             this.Name = "StoreHouse";
             this.Size = new System.Drawing.Size(881, 637);
             this.Load += new System.EventHandler(this.StoreHouse_Load);
@@ -326,10 +306,10 @@ namespace LTTQ_BTL_N12.Forms
             ((System.ComponentModel.ISupportInitialize)(this.numUD)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDGBan.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDGNhap.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtGVShowStoreHouse)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtGVShowStoreHouse)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -350,10 +330,10 @@ namespace LTTQ_BTL_N12.Forms
         private DevExpress.XtraEditors.LabelControl labelControl7;
         private System.Windows.Forms.ComboBox cbbNSX;
         private System.Windows.Forms.ComboBox cbbTL;
-        private Bunifu.Framework.UI.BunifuCustomDataGrid dtGVShowStoreHouse;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnRemove;
         private System.Windows.Forms.Button btnAdd;
         private DevExpress.XtraEditors.GroupControl groupControl1;
+        private System.Windows.Forms.DataGridView dtGVShowStoreHouse;
     }
 }

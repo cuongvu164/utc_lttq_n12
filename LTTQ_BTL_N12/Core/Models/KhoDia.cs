@@ -11,19 +11,33 @@ namespace LTTQ_BTL_N12.Core.Models
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-
+    
     public partial class KhoDia
     {
-        [Key]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public KhoDia()
+        {
+            this.ChiTietHoaDonBans = new HashSet<ChiTietHoaDonBan>();
+            this.ChiTietHoaDonNhaps = new HashSet<ChiTietHoaDonNhap>();
+            this.MatHongDias = new HashSet<MatHongDia>();
+        }
+    
         public string MaDia { get; set; }
         public string TenDia { get; set; }
-        public int SoLuong { get; set; }
+        public Nullable<int> SoLuong { get; set; }
         public int DonGiaBan { get; set; }
         public int DonGiaNhap { get; set; }
         public string MaNSX { get; set; }
         public string MaTheLoai { get; set; }
-        public byte[] Anh { get; set; }
         public string GhiChu { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ChiTietHoaDonBan> ChiTietHoaDonBans { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ChiTietHoaDonNhap> ChiTietHoaDonNhaps { get; set; }
+        public virtual TheLoai TheLoai { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<MatHongDia> MatHongDias { get; set; }
+        public virtual NoiSanXuat NoiSanXuat { get; set; }
     }
 }

@@ -98,6 +98,8 @@ namespace LTTQ_BTL_N12.Forms
         private void btnInput_Click(object sender, EventArgs e)
         {
             moveSlide(btnInput);
+            PhieuNhap phieuNhap = new PhieuNhap();
+            addPanel(phieuNhap);
         }
 
         private void btnOutput_Click(object sender, EventArgs e)
@@ -143,6 +145,25 @@ namespace LTTQ_BTL_N12.Forms
         private void Home_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            moveSlide(btnSearchBill);
+            SearchBill searchbill = new SearchBill();
+            addPanel(searchbill);
+        }
+
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+            moveSlide(btnReport);
+            Report report = new Report();
+            addPanel(report);
         }
     }
 }

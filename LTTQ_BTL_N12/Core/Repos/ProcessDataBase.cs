@@ -10,7 +10,7 @@ namespace LTTQ_BTL_N12.Core.Repos
 {
     public class ProcessDataBase
     {
-        string strConnect = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=E:\C#\WindowsFormsSinhVienVer2\WindowsFormsSinhVienVer2\QuanLySinhVien.mdf;Integrated Security=True";
+        string strConnect = @"Data source=45.77.250.236;initial catalog=QuanLyThueBangDia;user id=sa;password=Sa@12345678";
         SqlConnection sqlConnect = null;
         //Hàm mở kết nối CSDL
         private void KetNoiCSDL()
